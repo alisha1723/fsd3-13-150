@@ -8,7 +8,7 @@ it direct connect with client OS rather tha browser
      -appendFile()
 -Directory Managrmrnt
     -mkdir()
-    -rmdir()
+    -rmdir()-depricated
     -readdir()
 -Metadata/Information
     -start()
