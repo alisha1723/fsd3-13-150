@@ -69,3 +69,14 @@ end("any html context/text)
 . server returns data only not html content bcoz html contents will be return by frontend devloper. the data is in json format
 . json always stores data in key value pair enclosd by {} array can be stored by[] one pair of curly bractek will rpresent one object and its property will be serprated by ",".
 
+## Headers 
+headers is used to tell the client , the type of data sent by the server it maybe html file , json data , plain text files , css file , any tokens (for login)
+1. text/plain -> text file
+2. text/html -> html contents/file
+3. application/json -> json contents/file
+4. text/css -> stylesheet
+5. application/form data -> for uploading file
+6. application/ auth -> for tokens 
+the headers can be set by res object at server side by two ways 
+
+7. 
