@@ -11,9 +11,18 @@ export const getAllProducts = () => {
     return products;
 }
 
-export const addProdct  = (item) => {
+export const addProducts  = (item) => {
     item.id = nextId;
     nextId++;
     products.push(item);
 
+};
+export const deleteProducts = (pid) => {
+    const item = products.findIndex((prd)=>prd.id === pid );
+    if(item == -1)
+        return false;
+
+    products.splice(item,1);
+    console.log("products remaining:", products);
+    return true;
 };

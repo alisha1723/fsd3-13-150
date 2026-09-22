@@ -1,5 +1,5 @@
 import http from "http"
-import { getAllProducts } from "./products.js";
+import { getAllProducts , addProducts , deleteProducts} from "./products.js";
 
 const server = http.createServer((req,res)=> {
     if(req.url === "/api/v1/products" && req.method === 'GET'){
@@ -54,9 +54,18 @@ const server = http.createServer((req,res)=> {
 
 
 
-     else if (req.url === '/' && req.method === 'DELETE'){
+     else if (req.url.startsWith('/api/v1/products/2') && req.method === 'DELETE'){
+        const pid =Number(req.url.split('/').pop());
+       
         res.statusCode = 200;
-        res.end("DELETE Request");
+        if(deleteProducts(pid)){
+
+        
+        res.end(JSON.stringify({msg:"item deleted"}));
+        }
+        else{
+            res.end(JSON.stringify({msg:'product with id ${pid} not found'}));
+        }
     }
      
     else{
