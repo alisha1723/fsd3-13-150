@@ -7,10 +7,13 @@ const products = [
 
 let nextId = 5;
 
-export const getAllProducts =() => {
+export const getAllProducts = () => {
     return products;
 }
 
-export const addProdct  = () => {
-    
-}
+export const addProdct  = (item) => {
+    item.id = nextId;
+    nextId++;
+    products.push(item);
+
+};
