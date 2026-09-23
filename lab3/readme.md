@@ -79,4 +79,21 @@ headers is used to tell the client , the type of data sent by the server it mayb
 6. application/ auth -> for tokens 
 the headers can be set by res object at server side by two ways 
 
-7. 
+7. res.setHeader
+8. application/auth -> for tokens
+the headers can be set by res object 
+
+
+
+
+## GET
+- no parameter pass to the server when we recive all items 
+
+## POST
+- to add records we pass the value from body section in JSON format of api tester 
+
+## DELETE
+- to delete any product we pass parameter that is id of the product from url
+
+## UPDATE 
+- to update any product we pass id from url and data to update from body 
